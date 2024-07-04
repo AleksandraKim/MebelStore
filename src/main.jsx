@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
@@ -14,7 +14,7 @@ import Contacts from "./Components/Pages/Contacts.jsx";
 
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "*",
     element: <App/>,
