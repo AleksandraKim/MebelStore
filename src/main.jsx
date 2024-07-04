@@ -46,7 +46,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
  
-    <RouterProvider basename="/MebelStore" router={router}/>
+    <RouterProvider basename={process.env.NODE_ENV==='production' ? '/MebelStore' : '/'} router={router}/>
    
   </React.StrictMode>
 );
