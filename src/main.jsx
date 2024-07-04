@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import {
-  createHashRouter,
+  createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
@@ -14,7 +14,7 @@ import Contacts from "./Components/Pages/Contacts.jsx";
 
 
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "*",
     element: <App/>,
@@ -46,7 +46,7 @@ const router = createHashRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
  
-    <RouterProvider router={router}/>
+    <RouterProvider basename="/MebelStore" router={router}/>
    
   </React.StrictMode>
 );
